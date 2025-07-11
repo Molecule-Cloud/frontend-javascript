@@ -28,7 +28,7 @@ This task introduces you to TypeScript basics and DOM manipulation using vanilla
 
 ---
 
-## Requirements
+## Requirement
 
 - When running, Webpack should return **No type errors found**.
 - Every variable should use TypeScript types when possible.
