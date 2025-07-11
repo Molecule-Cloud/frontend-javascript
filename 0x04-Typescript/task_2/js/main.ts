@@ -45,3 +45,26 @@ function createEmploye(salary: number |string):DirectorInterface | TeacherInterf
         return new Director();
     }
 }
+
+
+function isDirector(employee: DirectorInterface | TeacherInterface): employee is Director {
+    return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function executeWork(employee: DirectorInterface | TeacherInterface): string {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    } else {
+        return employee.workTeacherTasks();
+    }
+}
+
+let Subjects: "Math" | "History";
+
+function teachClass(todayClass: string): string {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    } else if (todayClass === "History") {
+        return "Teaching History";
+    }
+}

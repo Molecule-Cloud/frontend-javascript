@@ -34,3 +34,23 @@ function createEmploye(salary) {
         return new Director();
     }
 }
+function isDirector(employee) {
+    return employee.workDirectorTasks !== undefined;
+}
+function executeWork(employee) {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    }
+    else {
+        return employee.workTeacherTasks();
+    }
+}
+var Subjects;
+function teachClass(todayClass) {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    }
+    else if (todayClass === "History") {
+        return "Teaching History";
+    }
+}
